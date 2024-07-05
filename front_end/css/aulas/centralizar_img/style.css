@@ -1,0 +1,13 @@
+.not-center-img, .center-img {
+    height: 200px;
+    width: 400px;
+    background-image: url("luffy.jfif");
+
+} 
+
+.center-img {
+    border: 2px solid black;
+    margin-bottom: 10px;
+    background-position: center; /*centraliza a imagem, deixa mais visivel o foco da imagem*/
+    background-size: cover; /*usado para redimensionar a imagem de fundo de forma com que cubra total a area do elemento*/
+}
