@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selling Cars</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="pneus.png" type="image/x-icon">
+</head>
+<body>
+    <div class="conteiner">
+        <header>
+            <nav class="menu"> <!--menu de navegação-->
+                <input type="checkbox" class="menu-fake">
+                
+                <div class="menu-lines">
+                    <span></span>
+                    <span></span> 
+                    <span></span>
+                    <!--esses spans seram os hamburguers-->
+                </div>
+                <ul>
+                    <li><a href="">Home</a></li><!--menu de opções-->
+                    <li><a href="">Tema</a></li>
+                    <li><a href="">Fale conosco</a></li> 
+                    <li><a href="">Sair</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <h1 class="title-1">Cadastre seu veiculo para vender mais rapido!</h1>
+        <section>
+            <form action="">
+                <section class="form-conteiner">
+                    <section class="form-header">
+                        <p>Fomulario</p>
+                        <section class="form-body">
+                            <h2 class="form-title">Venda ja seu veiculo!</h2>
+                            <p>Descreva as caracteristicas e marque os opcionais que ele possui</p>
+                            <section class="box-input">
+                                <label for="title">Titulo do anúncio <span class="required-field">*</span></label>
+                                <input type="text" name="title" id="title" class="block" placeholder="Um titulo para anunciar seu veiculo" minlength="1" maxlength="30" required>
+                            </section>
+                            <section class="box-input">
+                                <label for="price">Preço <span class="required-field">*</span></label>
+                                <input type="number" name="price" id="price" class="block" placeholder="Defina um preço" required>
+                                <br>
+                                <label for="description">Descrição <span class="required-field">*</span></label>
+                                <textarea name="description" id="description" class="block" placeholder="Aqui você coloca os detalhes do veiculo, por exemplo se ele tem algum arranhão"></textarea>
+                                <section class="box-input">
+                                    <label for="brand">Marca <span class="required-field">*</span></label>
+                                    <input type="text" name="brand" id="brand" class="block" placeholder="Digite a marca do veiculo">
+                                </section>
+                                <section class="box-input">
+                                    <label for="model">Modelo <span class="required-field">*</span></label>
+                                    <input type="text" name="model" id="model" class="block" placeholder="Digite a modelo do veiculo">
+                                </section>
+                                <section class="box-input">
+                                    <label for="mileage">Kilometragem <span class="required-field">*</span></label>
+                                    <input type="number" name="mileage" id="mileage" class="block" placeholder="Digite a kilometragem do veiculo">
+                                </section>
+                                <section class="box-input">
+                                    <label for="purchase-date">Data de compra <span class="required-field">*</span></label>
+                                    <input type="date" name="purchase-date" id="purchase-date" class="block">
+                                    <section class="box-input">
+                                        <p>Tipo de câmbio <span class="required-field">*</span></p>
+                                        <input type="radio" name="gear" id="manual">
+                                        <label for="manual">Manual</label>
+                                        <input type="radio" name="gear" id="auto">
+                                        <label for="auto">Automatico</label>
+                                    </section>
+                                    <section class="optional-box">
+                                        <p>Opcionais<span class="required-field">*</span></p>
+                                        <ul class="optional-list">
+                                         <li>
+                                            <input type="checkbox" name="optional[]" id="airbag" value="airbag"> <!-- "[]" seria para o back-end receber mais de um dado, pois o checkbox permite assinar mais de um elemento-->
+                                            <label for="airbag">Airbag</label>
+                                         </li>
+                                         <li>
+                                            <input type="checkbox" name="optional[]" id="alarm" value="alarm">
+                                            <label for="alarm">Alarme</label>
+                                         </li>
+                                         <li>
+                                            <input type="checkbox" name="optional[]" id="ac" value="ac">
+                                            <label for="ac">Ar Condicionado</label>
+                                         </li>
+                                         <li>
+                                            <input type="checkbox" name="optional[]" id="reverse-camera" value="reverse-camera">
+                                            <label for="reverse-camera">Camera de ré</label>
+                                         </li>
+                                        </ul>
+                                    </section>
+                                    <section class="optional-box">
+                                        <ul class="optional-list">
+                                         <li>
+                                            <input type="checkbox" name="optional[]" id="lane-assist" value="lane-assist">
+                                            <label for="lane-assist">Assistente de pista</label>
+                                         </li>
+                                         <li>
+                                            <input type="checkbox" name="optional[]" id="keyless" value="keyless">
+                                            <label for="keyless">Partida keyless</label>
+                                         </li>
+                                         <li>
+                                            <input type="checkbox" name="optional[]" id="smartphone" value="smartphone">
+                                            <label for="smartphone">Integração com o Celular</label>
+                                         </li>
+                                         <li>
+                                            <input type="checkbox" name="optional[]" id="leather-seat" value="leather-seat">
+                                            <label for="leather-seat">Banco de Couro</label>
+                                         </li>
+                                        </ul>
+                                    </section>
+                                        <section class="box-input">
+                                            <p>Fotos do carro: <span class="required-field">*</span></p>
+                                            <input type="file" multiple accept="image/png, image/jpg" id="images" name="images" required> <!--"multiple" quer dizer que esse input aceita mais de um aquivo-->
+                                        
+                                    </section>
+                                </section>
+                            </section>
+                            <input type="submit" class="btn-submit">
+                        </section>
+                    </section>
+                </section>
+            </form>
+        </section>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>

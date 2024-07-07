@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(234, 211, 255);
+}
+
+h2,h3,h4,h5 {
+    color: #333;
+}
+
+p, label {
+    color: #444;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0px;
+}
+
+input[type="text"], input[type="number"], input[type="date"],input[type="file"], textarea{ /* posso especificar o tipo do input que quero que o efeito pegue*/ 
+    width: 400px;
+    
+}
+
+textarea {
+    padding: 10px 5px;
+}
+
+header {
+    height: 160px;
+    background-image: url(banner_car.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+header::after {
+    content: '';
+    background: #000000ad;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 160px;
+    width: 100%;
+    
+}
+
+.menu-lines {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.menu .menu-fake {
+    position: absolute;
+    z-index: 1000;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+}
+
+.menu .menu-lines {
+    position: absolute;
+    z-index: 999;
+    width: 30px;
+    height: 30px;
+    top: 1px;
+    left: 1px;
+}
+
+.menu .menu-lines span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: #f5f5f5;
+    transition: all 200ms; /* transition "all" (adicionar a trasição a todos os elementos, "200ms" é o tempo de duração 200 milisegundos */ 
+}
+
+.menu .menu-fake:checked ~ .menu-lines span {
+    background-color: rgb(12, 3, 65);
+
+}
+/*pegando os spans (filho 1, filho 2 e filho 3) os 3 spans*/
+.menu .menu-fake:checked ~ .menu-lines span:nth-child(1) { 
+    transform-origin: 0% 0%; 
+    transform: rotate(45deg) scaleX(1.0); /* rotate 45deg (girar 45graus), scaleX 1.25 (crescer 25%) de 100% do seu tamanho, ele ira para 125% */
+    
+}
+
+.menu .menu-fake:checked ~ .menu-lines span:nth-child(2) {
+    opacity: 0;   
+}
+
+.menu .menu-fake:checked ~ .menu-lines span:nth-child(3) {
+    transform-origin: 0% 100%; /* definindo o minimo e o maximo de rotação do span (barrinha do hamburguer) */
+    transform: rotate(-45deg) scaleX(1.0);
+}
+
+.menu ul {
+    position: absolute;
+    z-index: 998; /*fica abaixo do hamburguer, para dar pra ver o efeito acontecer */
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: calc(100vh - 100px); /* fazer um calculo para descontar o tamanho de 100px do padding-top para n gerar barra de rolagem*/
+    padding-top: 100px;
+    background-color: white;
+    margin-left: -300px; /* como ele tem 300px de largura (width) utilizamos a mesma medida para retira-lo da tela pra poder gerar o efeito dele aparecer ao clicar no menu hamburguer*/
+    transition: all 200ms;
+}
+
+.menu .menu-fake:checked ~ ul {
+    margin-left: 0; /*volta o menu na tela com a medida dada inicialmente*/
+}
+
+.menu ul li {
+    padding: 10px 30px;
+}
+
+.menu ul a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all  0.3s;
+
+}
+
+.menu ul a:hover {
+    color: #808080;
+    
+}
+
+.title-1 {
+    color: white;
+    font-size: 26px;
+    padding: 15px;
+    position: absolute;
+    top: 25px;
+    left: 50px;
+}
+
+.form-conteiner {
+    background-color: #fdfdfd;
+    width: 70%;
+    border-radius: 3px;
+    margin: 0 auto;
+    position: relative; /* Definida a "position: relative;" porque caso tenha um elemento de "position: absolute;" ele servira como referencia para tal elemento se posicionar*/
+    top: -45px; /* para o nosso formulario ficar com a estetica acima do header*/
+}
+
+.form-header {
+    border-bottom: 1px solid #dfdfdf;
+    height: 45px;
+}
+
+.form-header > p {
+    font-weight: bold;
+    color: rgba(16, 0, 105, 0.745);
+    border-bottom: 2px solid rgba(16, 0, 105, 0.745);
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase; /*letras maiusculas*/
+    height: 45px; /*altura*/
+    line-height: 45px; /*altura de linha*/
+}
+
+.form-body {
+    background-color: #fdfdfd;
+    padding: 30px;
+}
+
+.form-title {
+    margin-bottom: 15px;
+}
+
+.form-body p {
+    margin-bottom: 20px;
+}
+
+.required-field {
+    color: red;
+}
+
+.box-input {
+    margin-bottom: 35px;
+}
+
+.block {
+    display: block;
+}
+
+.optional-box {
+    display: inline-block;
+    margin: 0 30px 40px 0;
+}
+
+.btn-submit {
+    background-color: #673ab7;
+    color: white;
+    border-radius: 5px;
+    font-size: 13px;
+    border: 2px solid transparent;
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.btn-submit:hover {
+    background-color: #a268ff;
+    border-color: #673ab7;
+    color: white;
+}
+
+
+
+
+
