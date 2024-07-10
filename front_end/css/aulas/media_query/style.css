@@ -1,0 +1,35 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: blue; /* acima de 600px sera "blue" */
+}
+
+@media screen and (max-width:600px) { /* até no "maximo" 600px o h1 sera "verde" */
+    h1 {
+        color: rgb(0, 255, 0);
+    }
+}
+
+p {
+    color: aqua; /* abaixo de 700px ele sera da cor "aqua" */
+}
+
+@media screen and (min-width:700px) {
+    p {
+        color: rgb(255, 238, 0); /* precisa ter no "minimo" 700px sera "amarelo" */
+    }
+}
+/* utilizando o "max-width: 500px;" de exemplo (significa que esta dando prioridade ao tamanho maior de tela, mas quando se utiliza por exemplo "min-width: 600px;" significa que a função é suportada até "600px", dando prioridade a  menor tela (mobile) que é o mais recomendado */
+
+h2 {
+    opacity: 0%;
+}
+
+@media screen and (orientation: landscape) {
+    h2 {
+        opacity: 100%;
+        transition: 200ms;
+    }
+}
