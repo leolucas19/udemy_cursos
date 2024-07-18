@@ -70,7 +70,7 @@ nav {
     background-image: url("img/mainbanner.png");
     background-size: cover; /* ficar por traz do conteudo*/
     background-position: center;
-    padding: 10rem 0; /*1rem = 16px, portanto 10rem = 160px*/
+    padding: 10rem 0; /*rem é vezes o tamanho da fonte, portanto 2rem = 2x o tamanho da font por exemplo de 16px 2rem é 32px*/
 }
 
 .main-banner h1,
@@ -79,4 +79,209 @@ nav {
     text-align: center;
     font-weight: bold;
     text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.699);
+}
+
+/* services */
+.services-conteiner {
+    padding: 5rem 0;
+}
+
+.services-conteiner ul { 
+    display: flex; /* deixar nossa lista de serviços uma do lado do outro (diplay: flex; faz isso)*/
+    width: 90%;
+    margin: 0 auto;
+}
+
+.services-conteiner li {
+    flex: 1 1 200px; /* primeiro 1 (a proporção que ele vai crescer quando a pagina aumentar) da mesma forma o segundo 1 ( a proporção quando diminuir) e o terceiro (largura base 200px)*/list-style: none; /*tira o ponto da lista*/
+    text-align: center;
+    padding: 2px;
+}
+
+.fas { /*icone*/
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.fa-shield-alt {
+    color: #2cc76a;
+}
+
+.fa-rocket {
+    color: #ef3f29;
+}
+
+.fa-comments {
+    color: #ef8f29;
+}
+
+.services-conteiner h3 {
+    margin-bottom: 25px;
+}
+
+.services-conteiner p {
+    line-height: 24px;
+}
+
+/* prices and plans */
+.pricing-conteiner {
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+.pricing-conteiner h2 {
+    font-size: 36px;
+}
+
+.pricing-conteiner p {
+    font-size: 20px;
+}
+
+.plans-conteiner {
+    display: flex; /* Deixar os planos lado a lado */
+    justify-content: space-between; /* vai dar um espaço igual para todos os elementos (tabelas) com o espaço disponivel da tela */
+    width: 90%;
+    margin: 50px auto 0;
+}
+
+.plan { /* cada plano */
+    flex: 1; /* para dizer que todos eles terão o tamanho igual dentro do flex */
+    max-width: 275px; /* para eles não passarem dessa largura maxima */
+    margin: 0 20px;
+}
+
+.plan ul {
+    padding: 0;
+}
+
+.plan li {
+    list-style: none; /*remover o pontinho da lista */
+    height: 50px;
+    line-height: 50px; /*altura das linhas */
+    background-color: #e8e9ea;
+    color: #333;
+}
+
+.plan .price { /*elemento filho do plan (os preços) */
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* deixar um circulo */
+    background-color: #2cc762;
+    color: white;
+    text-align: center;
+    line-height: 120px; /* para centralizar o texto ao meio do circulo */
+    margin: 0 auto -50px; /* colocando o preço dentro do plano */
+    font-size: 18px;
+    position: relative; /* com "relative" o circulo ficara por cima do plano (relative ganha do static) */
+}
+
+.plan .plan-name { /*nome do plano */
+    text-transform: uppercase; /* deixar maiusculo */
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #202b34;
+    padding: 50px 0;
+}
+
+.plan .plan-btn { /* botao para saber mais */
+    background-color: #2cc762;
+    color: white;
+    font-size: 24px;
+    height: 75px;
+    line-height: 75px;
+    cursor: pointer;
+}
+
+.plan .recommended { /* Plano recomendado */
+    background-color: #f45c57;
+}
+
+/* busca de dominio */
+.searchdomain-container {
+    background-color: #34454e;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.searchdomain-container h2 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.searchdomain-container p {
+    color: #d5d5d5;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.searchdomain-container input {
+    display: block; /* deixar o campo de texto e o de enviar ("procurar dominio") um abaixo do outro */
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.searchdomain-container input[type= "text"] {
+    width: 60%;
+    padding: 20px;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.searchdomain-container input[type=submit] {
+    background-color: #2cc76a;
+    padding: 15px 30px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.searchdomain-container input[type=submit]:hover {
+    opacity: 1; /* com a opacidade 0.8 ao passar o cursor acima do elemento ele ficara com opacidade de 1 */
+}
+
+/* contact form */
+.contact-container {
+    text-align: center;
+    padding: 5rem 0 2rem 0;
+}
+
+.contact-container h2 {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.contact-container input, .contact-container textarea {
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1 solid #ccc;
+    margin: 0 10px 20px;
+}
+
+.contact-container textarea {
+    display: block; /* para ocupar somente uma linha inteira */
+    margin: 0 auto 20px;
+    width: 470px;
+    height: 150px;
+}
+
+.contact-container input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    background-color: #2cc76a;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
+    margin: 50px 0 100px;
+
 }
