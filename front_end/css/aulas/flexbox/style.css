@@ -1,0 +1,17 @@
+body {
+    padding-bottom: 500px;
+}
+
+/* 1 - flex */
+.flex {
+    display: flex; /* o "flex" vai colocar os elementos lado a lado */
+    background-color: #dbdbdb;
+    margin-bottom: 20px;
+}
+
+/* 2 - flex column */
+.flex-column {
+    display: flex; /* primeiro aplicar o flex */
+    flex-direction: column;
+    background-color: #dbdbdb;
+}
