@@ -254,6 +254,10 @@ nav {
     margin-bottom: 40px;
 }
 
+.contact-container p {
+    margin-bottom: 30px;
+}
+
 .contact-container input, .contact-container textarea {
     width: 200px;
     padding: 10px 20px;
@@ -283,5 +287,82 @@ footer {
     text-align: center;
     font-weight: bold;
     margin: 50px 0 100px;
+}
 
+/* responsividade */
+
+/* small laptops a partir de 1100px */
+@media (max-width: 1100px) {
+    
+    .plans-conteiner {
+        width: 95%; /* diminur a largura dos planos para ganhar mais espaço */
+    }
+
+    .plan {
+        margin: 0 5px; /* deixando mais proximos um dos outros */
+    }
+}
+
+/* tablet 900px (aproximadamente) */
+@media (max-width: 900px) {
+
+    .main-banner p {
+        
+        padding: 0 6rem; /* ou seja (96px) de espaço para comprimir o texto e centralizar mais */
+    }
+
+    .searchdomain-container { /* area de pesquisas de dominios */
+       padding: 2rem 4rem;
+    }
+}
+
+/* celular 576px */
+@media (max-width: 576px) {
+    html, body {
+        overflow-x: hidden; /* tudo q passar da tela sera escondido */
+    } 
+
+    .navbar-items li {
+        font-size: 12px;
+        margin-left: 10px; /* diminuir e espaçar meus elementos, para eles se encaixarem na minha barra de navegação */
+    }
+
+    .main-banner p {
+        padding: 0 2rem;
+    }
+
+    .services-conteiner ul {
+        flex-direction: column; /* para minha lista de serviços ficarem uma abaixo da outra ao diminuir o tamanho da tela */
+    }
+
+    .plans-conteiner {
+        flex-direction: column; /* para que os planos fiquem um abaixo do outro ao diminuir a largura da tela */
+        width: 100%; /* para ocupar todo espaço da tela */
+        padding: 0 2rem; /* espaçamento nas laterais  dos planos */
+    }
+
+    .plan {
+        width: 100%;
+        max-width: 100%; /* para que os planos possam ocupar 100% da largura da tela */
+        margin-bottom: 15px; /* para os planos n ficarem colados uns aos outros */
+    }
+
+    .searchdomain-container h2 {
+        font-size: 28px; /* diminuir tamanho da fonte do titulo de da area de pesquisas de dominio, para encaixar melhor na tela */
+    }
+
+    .searchdomain-container input[type="text"] {
+        width: 100%; /* na area de pesquisa apresentar o placeholder completo */
+    }
+
+    .contact-container {
+        padding: 3rem 2rem; /* espaçamento dos elementos nas laterais do site */
+    }
+
+    .contact-container input, 
+    .contact-container textarea { /* para os inputs textarea ocuparem toda a tela */
+        width: 100%;
+        margin: 10px 0; /* alinhamento dos elementos */
+
+    }
 }
