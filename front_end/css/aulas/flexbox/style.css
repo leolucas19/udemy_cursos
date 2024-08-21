@@ -119,3 +119,88 @@ body {
 .gap .box {
     width: 32%; /* todas as box que estão dentro do gap teram 32% de largura */
 }
+
+/* Order */
+.order {
+    display: flex;
+}
+/* através do "order" podemos ordenar os itens */
+#one {
+    order: 1;
+}
+
+#two {
+    order: 2;
+}
+
+#three {
+    order: 3;
+}
+
+/* grow */
+.grow {
+    display: flex;
+}
+/* com o "grow" conseguimos ajustar a proporção dos elementos q estão afetados por "flex" */
+.grow .box {
+    flex: 1;
+}
+
+.grow #big {
+    flex: 2;
+}
+
+/* basis */
+.basis { /* se complementa com o "grow" */
+    display: flex;
+}
+
+.basis .box {
+    flex-basis: 20px;
+}
+
+.basis #big {
+    flex-grow: 1;
+}
+
+/* shrink */
+.shrink {
+    display: flex;
+}
+
+.shrink .box {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 250px;
+    width: auto;
+}
+
+.shrink .small {
+    flex-shrink: 2; /* ele vai diminuir para q os elementos fiquem inteiros na tela ( ele diminui mais q os outros ) */
+}
+
+/* shorthand */
+.shorthand {
+    display: flex;
+}
+
+.shorthand .box {
+    width: auto;
+    flex: 1 1 50px; /* 1 de grow, 1 de shrink e 50px de basis */
+}
+
+.shorthand .diferent {
+    flex: 3 1 400px;
+}
+
+
+.auto-alignment {
+    height: 300px;
+    display: flex;
+    align-items: end;
+    border:  1px solid rgb(0, 60, 255);
+}
+
+.auto-alignment .diferent {
+    align-self: center; /* essa regra ajuda a alinhar diferente do q esta imposto nos outros elementos */
+}
